@@ -147,6 +147,9 @@ in
         # firefox
         "workspace name:browser, class:^(firefox)$"
 
+        #telegram
+        "workspace name:telegram, class:^(org.telegram.desktop)$"
+
         # imv
         "float, class:^(imv)$"
         "size 99.5% 99%, class:^(imv)$"
@@ -180,12 +183,12 @@ in
         "1, monitor:HDMI-A-1,default:true"
         "2, monitor:HDMI-A-1"
         "3, monitor:HDMI-A-1"
-        "5, monitor:HDMI-A-1"
         "6, monitor:HDMI-A-1"
         "7, monitor:HDMI-A-1"
         "8, monitor:HDMI-A-1"
         "name:browser, monitor:HDMI-A-1"
         "name:video, monitor:HDMI-A-1, gapsin:0, gapsout:0"
+        "name:telegram, monitor:HDMI-A-1"
 
       ];
 
@@ -300,7 +303,7 @@ in
         "$mainMod, 2, workspace, 2"
         "$mainMod, 3, workspace, 3"
         "$mainMod, 4, workspace, name:video"
-        "$mainMod, 5, workspace, 5"
+        "$mainMod, 5, workspace, name:telegram"
         "$mainMod, 6, workspace, 6"
         "$mainMod, 7, workspace, 7"
         "$mainMod, 8, workspace, 8"
