@@ -8,7 +8,7 @@ c=$(echo "$b" | wc -w)
 
 flake="nixpkgs#"
 
-input="--inputs-from /persist/home/nixconfig"
+# input="--inputs-from /persist/home/nixconfig"
 
 
 #options
@@ -20,7 +20,7 @@ while getopts 'gi' options; do
 	exit
 	;;
         i)
-		nix shell $input "nixpkgs#$2" --impure
+		nix shell "nixpkgs#$2" --impure
 	 exit
 	;;
 
@@ -35,5 +35,5 @@ echo -n "$flake""$(echo $b | awk '{print $'$a'}') "
 done)
 # 
 
-nix shell $input $num
+nix shell $num
 

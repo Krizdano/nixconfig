@@ -39,7 +39,7 @@
       # w3m with google search 
       gg = "w3m google.com";
 
-      search = "nix search --inputs-from /persist/home/nixconfig nixpkgs";
+      search = "nix search nixpkgs";
     };
 
     completionInit = "autoload -Uz compinit
