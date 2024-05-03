@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, inputs, ... }:
 
 {
   imports = [
@@ -9,11 +9,13 @@
   # Enable flakes
   nix = {
     package = pkgs.nixFlakes;
+    nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
     channel.enable = false;
     settings = {
       auto-optimise-store = true;
       experimental-features = [ "nix-command" "flakes" ];
     };
+    registry.nixpkgs.flake = inputs.nixpkgs;
   };
 
   # move nix daemon from ram to disk
