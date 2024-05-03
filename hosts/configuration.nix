@@ -2,7 +2,7 @@
 
 {
   imports = [
-		../modules/services/greetd.nix
+    ../modules/services/greetd.nix
   ]
   ++ (import ../modules/security);
 

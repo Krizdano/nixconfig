@@ -12,7 +12,7 @@
     tt # cli typing test
     redqu # media centric reddit client 
     keepassxc
-		nitch
+    nitch
     unzip
     virt-manager
     gdu # disk management

@@ -1,6 +1,6 @@
 { pkgs, user, secrets, ... }:
-let 
-inherit (secrets) users;
+let
+  inherit (secrets) users;
 in
 {
   imports =
@@ -38,23 +38,23 @@ in
   };
 
   # user
-	users = {
-		defaultUserShell = pkgs.zsh;
+  users = {
+    defaultUserShell = pkgs.zsh;
     mutableUsers = false;
-		users = {
-			root = {
-				inherit (users.root) hashedPassword;
-			};
-			${user} = {
-				inherit (users.primary) hashedPassword;
-				isNormalUser = true;
-				extraGroups = [ "jupyter" "networkmanager" "wheel" "video" "libvirtd" "audio" "adbusers" ];
-				packages = with pkgs; [
-# user packages 
-				];
-			};
-		};
-	};
+    users = {
+      root = {
+        inherit (users.root) hashedPassword;
+      };
+      ${user} = {
+        inherit (users.primary) hashedPassword;
+        isNormalUser = true;
+        extraGroups = [ "jupyter" "networkmanager" "wheel" "video" "libvirtd" "audio" "adbusers" ];
+        packages = with pkgs; [
+          # user packages 
+        ];
+      };
+    };
+  };
 
   services.flatpak.enable = true;
 

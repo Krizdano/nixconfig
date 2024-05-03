@@ -32,7 +32,7 @@
     let
       location = "$HOME/.nixconfig";
       secrets = import ./secrets.nix;
-			user = secrets.users.primary.userName;
+      user = secrets.users.primary.userName;
     in
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;

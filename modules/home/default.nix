@@ -108,19 +108,23 @@
       package = pkgs.catppuccin-cursors.mochaDark;
       size = 29;
     };
-		gtk3.extraConfig = {
-			gtk-application-prefer-dark-theme = true;
-		};
-		gtk4.extraConfig = {
-			gtk-application-prefer-dark-theme = true;
-		};
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme.override { color = "black"; };
+    };
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = true;
+    };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = true;
+    };
   };
 
-	dconf.settings = {
-		"org/gnome/desktop/interface" = {
-			color-scheme = "prefer-dark";
-		};
-	};
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
 
   qt = {
     enable = true;
