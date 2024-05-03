@@ -10,16 +10,11 @@
       ".w3m"
 
 
-      ".config/neofetch"
-      ".config/htop"
-      ".config/kdeconnect"
-      ".config/libvirt"
-      ".config/lobster"
-      ".config/toot"
-      ".config/gurk"
-      ".config/Signal"
-      ".config/keepassxc"
-      ".config/epr"
+      { directory = ".config/lobster"; method = "symlink"; }
+      { directory = ".config/kdeconnect"; method = "symlink"; }
+      { directory = ".config/Signal"; method = "symlink"; }
+      { directory = ".config/keepassxc"; method = "symlink"; }
+      { directory = ".config/epr"; method = "symlink"; }
 
       # # android studio
       # ".config/.android"
@@ -27,23 +22,17 @@
       # ".config/Google"
       # ".m2"
 
-      ".cache/dconf"
-      ".cache/fontconfig"
-      ".cache/libvirt"
-      ".cache/virtmanager"
-      ".cache/mesa_shader_cache"
-      ".cache/mozilla"
-      ".cache/nix"
-      ".cache/nvim"
-      ".cache/ytfzf"
-      ".cache/qtshadercache-x86_64-little_endian-lp64"
+      { directory = ".cache/mesa_shader_cache"; method = "symlink"; }
+      { directory = ".cache/mozilla"; method = "symlink"; }
+      { directory = ".cache/nix"; method = "symlink"; }
+      { directory = ".cache/nvim"; method = "symlink"; }
 
-      ".local/share/TelegramDesktop"
-      ".local/share/zsh"
-      ".local/share/applications"
-      ".local/share/gurk"
       ".local/share/gnupg"
       ".local/share/flatpak"
+      { directory = ".cache/ytfzf"; method = "symlink"; }
+      { directory = ".local/share/TelegramDesktop"; method = "symlink"; }
+      { directory = ".local/share/zsh"; method = "symlink"; }
+      ".local/state/wireplumber"
 
       # android studio
       # ".local/share/Android Open Source Project"
@@ -53,7 +42,6 @@
       # "AndroidStudioProjects"
 
 
-      ".local/state/wireplumber"
 
       {
         directory = "nixconfig";
