@@ -1,20 +1,13 @@
-{ pkgs, secrets, ... }: 
+{ pkgs, secrets, ... }:
 let
-user = secrets.users;
+  user = secrets.users;
 in
 {
 
   programs.git = {
     enable = true;
-    # diff-so-fancy = {
-    #   enable = true;
-    # };
-    delta = {
+    diff-so-fancy = {
       enable = true;
-      options = {
-        side-by-side = false;
-        syntax-theme = "Catpuccin-mocha";
-      };
     };
     signing = {
       key = null;
