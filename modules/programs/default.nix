@@ -6,6 +6,7 @@
   ./mpv.nix
   ./htop.nix
   ./starship.nix
+	./helix.nix
   ./waybar.nix
   #./wofi.nix
   ./firefox.nix
