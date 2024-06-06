@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 menu='dmenu -sync -i -p'
-bookmark_file='~/nixconfig/config/scripts/bookmarks'
-playlist='~/nixconfig/config/scripts/playlists'
+bookmark_file='/persist/home/nixconfig/config/scripts/bookmarks'
+playlist='/persist/home/nixconfig/config/scripts/playlists'
 screen='hyprctl dispatch dpms'
 monitor='eDP-1'
 music_player='mpv --shuffle --loop-playlist --title=playlist'
