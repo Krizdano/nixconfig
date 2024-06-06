@@ -8,8 +8,9 @@
   description = "My personal Nixos Configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    stable.url = "github:NixOS/nixpkgs/release-23.11";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    stable.url = "github:nixos/nixpkgs?ref=release-24.05";
+    # stable.url = "github:NixOS/nixpkgs/release-24.05";
 
     home-manager = {
       url = "github:nix-community/home-manager";
