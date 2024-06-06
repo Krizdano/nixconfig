@@ -39,7 +39,7 @@
       ripgrep
       swaylock
       wl-clipboard
-      neofetch
+      fastfetch
       unzip
       virt-manager
       gdu # disk management
