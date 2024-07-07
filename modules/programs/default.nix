@@ -8,6 +8,7 @@
   ./starship.nix
 	./helix.nix
   ./waybar.nix
+	./direnv.nix
   #./wofi.nix
   ./firefox.nix
   ./dconf.nix
