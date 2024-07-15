@@ -1,15 +1,15 @@
 {
 	"name": "Vimium C",
-	"@time": "3/29/2024, 7:12:32 PM",
-	"time": 1711719752261,
+	"@time": "7/5/2024, 7:03:38 PM",
+	"time": 1720186418582,
 	"environment": {
 		"extension": "1.99.997",
 		"platform": "linux",
-		"firefox": 124
+		"firefox": 115
 	},
 	"exclusionRules": [],
 	"grabBackFocus": true,
-	"keyLayout": 1,
+	"keyLayout": 26,
 	"keyMappings": [
 		"#!no-check",
 		"mapKey <f:n> e",
@@ -201,5 +201,6 @@
 		""
 	],
 	"vimSync": true,
-	"ignoreKeyboardLayout": 2
+	"ignoreKeyboardLayout": 1,
+	"ignoreCapsLock": 2
 }
