@@ -75,6 +75,9 @@
       # vi mode
       source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
+      # fzf tab completion
+      source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
+
       # custom syntax highlighting
       ZSH_HIGHLIGHT_HIGHLIGHTERS+=(main brackets pattern root line)
 
