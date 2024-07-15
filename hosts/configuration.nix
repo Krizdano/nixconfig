@@ -85,8 +85,10 @@
 
   # bash
   programs.bash = {
-    enableCompletion = true;
-    enableLsColors = true;
+    completion = {
+			enable = true;
+		} ;
+		enableLsColors = true;
     promptInit = ''eval "$(starship init bash)"'';
   };
 
