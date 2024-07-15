@@ -68,7 +68,6 @@ in
         gaps_in = 5;
         gaps_out = 13;
         border_size = 2;
-        cursor_inactive_timeout = 7;
         resize_on_border = true;
         hover_icon_on_border = true;
 
@@ -89,6 +88,11 @@ in
         };
       };
 
+      cursor = {
+      	inactive_timeout = 7;
+      	hide_on_key_press = true;
+      };
+
 
 
       misc = {
@@ -106,7 +110,7 @@ in
       };
 
       master = {
-        new_is_master = true;
+        new_status = "master";
         new_on_top = true;
         special_scale_factor = 1.0;
       };
