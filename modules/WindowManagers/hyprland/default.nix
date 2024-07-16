@@ -27,7 +27,7 @@ in
         # check battery level
         "${ut} bat_level"
 
-        "[workspace special:terminal silent]  kitty -1 --title Main --class=main --listen-on=unix:/tmp/mykitty"
+        "[workspace special:terminal silent]  kitty -1 --title Main --class=main --listen-on=unix:@mykitty zellij -s main"
       ];
 
       monitor = [
@@ -268,7 +268,7 @@ in
         "$mainMod, M, exec, ${ut} play_videos" # Select and play videos from Videos directory
 
         # kitty in floating window
-        "$mainModSHIFT, RETURN, exec, kitty -1"
+        "$mainModSHIFT, RETURN, exec, kitty -1 zellij -s main-float"
 
         ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" # mute
 
