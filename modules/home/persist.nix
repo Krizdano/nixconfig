@@ -29,6 +29,7 @@
 
       ".local/share/gnupg"
       ".local/share/flatpak"
+      ".local/share/direnv"
       { directory = ".cache/ytfzf"; method = "symlink"; }
       { directory = ".local/share/TelegramDesktop"; method = "symlink"; }
       { directory = ".local/share/zsh"; method = "symlink"; }
