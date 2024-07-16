@@ -52,7 +52,7 @@ terminal ()
 	then
 		hyprctl dispatch togglespecialworkspace terminal 
 	else
-		kitty -1 --title Main --class=main --listen-on unix:/tmp/mykitty zellij -s main & disown
+		kitty --title=main --class=main zellij -s main & disown
 	fi
 }
 

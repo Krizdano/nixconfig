@@ -27,7 +27,7 @@ in
         # check battery level
         "${ut} bat_level"
 
-        "[workspace special:terminal silent]  kitty -1 --title Main --class=main --listen-on=unix:@mykitty zellij -s main"
+        "[workspace special:terminal silent]  kitty --title=main --class=main zellij -s main"
       ];
 
       monitor = [
@@ -250,9 +250,9 @@ in
         "$mainMod, N, exec, ${cf} nixpkgs_search"
 
         # ytfzf
-        "$mainMod, Y, exec, kitty @ --to unix:/tmp/mykitty launch --title youtube --type tab ytfzf -t -T kitty --detach -l -s -f --preview-side=right"
+        "$mainMod, Y, exec, kitty @ --to unix:@mykitty launch zellij run -c -i -- ytfzf -t -T kitty --detach -l -s -f --preview-side=right"
         "$mainMod, Y, workspace, special:terminal"
-        "$mainMod, s, exec, kitty @ --to unix:/tmp/mykitty launch --title subscriptions --type tab ytfzf --detach -t -T kitty -l -s -f -c S --preview-side=right"
+        "$mainMod, s, exec, kitty @ --to unix:@mykitty launch zellij run -c -i -- ytfzf --detach -t -l -s -f -c S --preview-side=right"
         "$mainMod, s, workspace, special:terminal"
 
         # scripts
