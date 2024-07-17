@@ -368,49 +368,5 @@ in
 
 
     };
-    extraConfig = ''
-      # Make kitty keybindings more like vim
-      # reduces opacity to know we are inside a submap
-      bindr=CONTROL,Control_L,exec,hyprctl keyword decoration:active_opacity 0.6
-
-      # keybinding for enabling kittyvimode
-      bindr=CONTROL,Control_L,submap,kittyvimode
-
-      # submap
-      submap=kittyvimode
-
-      # keybindings related to tabs in kitty
-      bind=,T,exec, wtype -M ctrl -M shift t # open new tab
-      bind=SHIFT,H,exec, wtype -M ctrl -M shift -P Left # previous tab
-      bind=SHIFT,l,exec, wtype -M ctrl -M shift -P Right # nex tab
-
-      # kebindings related to windos in kitty
-      bind=,q,exec, wtype -M ctrl -M shift w # close window 
-      bind=,RETURN,exec, kitty @ --to unix:/tmp/mykitty new-window # close window/tab
-      bind=,H,exec, wtype -M ctrl -M shift [ # previous window
-      bind=,L,exec, wtype -M ctrl -M shift ] # next window
-      bind=,J,exec, wtype -M ctrl -M shift [ # previous window
-      bind=,K,exec, wtype -M ctrl -M shift ] # next window
-
-      # kitty scrollback_buffer
-      bind=,P,exec, wtype -M ctrl -M shift h
-      # show outputs of a command in scroll_back_buffer
-      bind=,G,exec, wtype -M ctrl -M shift g
-
-      # switch between window layouts in kitty
-      bind=,S,exec, wtype -M ctrl -M shift l
-
-      # reset opacity
-      bind=,i,exec,hyprctl keyword decoration:active_opacity 1
-      # use reset to go back to the global submap
-      bind=,i,submap,reset
-
-      # will reset the submap, meaning end the current one and return to the global one
-
-      submap=reset
-    '';
-
   };
-
-
 }
