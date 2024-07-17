@@ -18,6 +18,7 @@
   # ./chromium.nix
   #./atuin.nix
   #./plymouth
+	./zellij.nix
   ./nixvim.nix
   # ./wezterm.nix
   ./aria2.nix
