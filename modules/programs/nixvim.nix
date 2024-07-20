@@ -226,6 +226,7 @@
 
     extraPackages = with pkgs; [
       nil
+      zls
     ];
 
     colorschemes = {
@@ -333,6 +334,7 @@ vim.api.nvim_create_user_command('Q',function(opt)
       treesitter = {
         enable = true;
         grammarPackages = with config.programs.nixvim.plugins.treesitter.package.builtGrammars; [
+          asm
           bash
           gitcommit
           gitignore
@@ -344,10 +346,14 @@ vim.api.nvim_create_user_command('Q',function(opt)
           toml
           kotlin
           c
+					norg
           lua
           yaml
           go
           latex
+          zig
+					vim
+					vimdoc
         ];
         folding = true;
       };
@@ -448,6 +454,7 @@ vim.api.nvim_create_user_command('Q',function(opt)
           };
           # pylsp.enable = true;
           cssls.enable = true;
+          clangd.enable = true;
         };
       };
 
