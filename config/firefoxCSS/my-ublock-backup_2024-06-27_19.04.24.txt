@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1719495264178,
+  "timeStamp": 1721464037416,
   "version": "1.58.0",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -38,10 +38,11 @@
   "hiddenSettings": {},
   "whitelist": [
     "chrome-extension-scheme",
+    "file-scheme",
     "moz-extension-scheme"
   ],
-  "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop\n* * 3p-script block\n* * 3p-frame block",
+  "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop\n* * 3p-script block\n* * 3p-frame block\nwww.reddit.com * 3p-script noop\nhome-manager-options.extranix.com * 3p-script noop\nwww.reddit.com ad-delivery.net * block\nwww.reddit.com google.com * block\nwww.reddit.com gstatic.com * block\ngithub.com * 3p-script noop\nneovim.io jsdelivr.net * block\nvi.stackexchange.com ajax.googleapis.com * block\nvi.stackexchange.com googletagmanager.com * block\nvi.stackexchange.com cookielaw.org * block\nvi.stackexchange.com gravatar.com * block\nsupport.mozilla.org firefox.com * block\nsupport.mozilla.org firefoxusercontent.com * block\npresearch.io fonts.googleapis.com * block",
   "urlFilteringString": "",
-  "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-csp-reports: * true\nno-scripting: * true\nno-scripting: search.nixos.org false\nno-scripting: nix-community.github.io false\nno-scripting: 192.168.0.1 false",
+  "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-csp-reports: * true\nno-scripting: * true\nno-scripting: search.nixos.org false\nno-scripting: nix-community.github.io false\nno-scripting: 192.168.0.1 false\nno-scripting: drive.proton.me false\nno-scripting: account.proton.me false\nno-scripting: www.reddit.com false\nno-scripting: home-manager-options.extranix.com false\nno-scripting: github.com false\nno-scripting: vid.puffyan.us false\nno-scripting: presearch.io false",
   "userFilters": ""
 }
