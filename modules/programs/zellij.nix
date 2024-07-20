@@ -35,15 +35,14 @@ keybinds clear-defaults=true {
         bind "n" "Down" { MoveFocus "Down"; }
         bind "e" "Up" { MoveFocus "Up"; }
         bind ";" { SwitchFocus; }
-        bind "k" { NewPane; SwitchToMode "Normal"; }
+        bind "k" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "s" { NewPane "Down"; SwitchToMode "Normal"; }
-        bind "p" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "q" { CloseFocus; SwitchToMode "Normal"; }
         bind "t" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
         bind "x" { TogglePaneFrames; SwitchToMode "Normal"; }
         bind "w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
         bind "f" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
-        bind "d" { SwitchToMode "RenamePane"; PaneNameInput 0;}
+        bind "p" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     }
     move {
         bind "Alt h" { SwitchToMode "Normal"; }
@@ -155,7 +154,8 @@ keybinds clear-defaults=true {
     shared_except "locked" {
         bind "Ctrl g" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
-        bind "Alt k" { NewPane; }
+        bind "Alt k" { NewPane "Right"; }
+        bind "Alt s" { NewPane "Down"; }
         bind "Alt u" { MoveTab "Left"; }
         bind "Alt y" { MoveTab "Right"; }
         bind "Alt m" "Alt Left" { MoveFocusOrTab "Left"; }
@@ -324,7 +324,7 @@ default {
 // Examples:
 //
 // copy_command "xclip -selection clipboard" // x11
-// copy_command "wl-copy"                    // wayland
+   copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
 
 // Choose the destination for copied text
