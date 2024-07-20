@@ -16,10 +16,7 @@
 			vim="nvim-client";
       ll = "ls -l";
       ls = "ls --color=always";
-      nt = ''pushd /persist/home; find nixconfig/notes -name '*.md' | fzf --preview="glow {}" | xargs vi; popd'';
-      sc = ''pushd /persist/home; find nixconfig/config/scripts -name '*.sh' | fzf --preview="pistol {}" | xargs vi; popd'';
       notes = ''glow  /persist/home/nixconfig/notes'';
-      conf = ''pushd /persist/home; find nixconfig -name '*.nix' | fzf --preview="pistol {}" | xargs vi; popd''; # nixos configuration
       # nixos rebuild
       re = "doas nixos-rebuild switch --flake /persist/home/nixconfig#$(hostname)";
 
