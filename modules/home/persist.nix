@@ -4,10 +4,8 @@
   home.persistence."/persist/home/" = {
     allowOther = true;
     directories = [
-      ".android"
       ".mozilla"
       ".ssh"
-      ".w3m"
 
 
       { directory = ".config/lobster"; method = "symlink"; }
@@ -30,6 +28,9 @@
       ".local/share/gnupg"
       ".local/share/flatpak"
       ".local/share/direnv"
+      ".local/share/android"
+      ".local/share/w3m"
+			
       { directory = ".cache/ytfzf"; method = "symlink"; }
       { directory = ".local/share/TelegramDesktop"; method = "symlink"; }
       { directory = ".local/share/zsh"; method = "symlink"; }

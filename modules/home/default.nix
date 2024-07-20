@@ -53,12 +53,14 @@
     file = {
       ".config/scripts".source = ../../config/scripts;
       ".config/ytfzf/subscriptions".source = ../../config/ytfzf/subscriptions;
-      ".w3m/keymap".source = ../../config/w3m/keymap;
+      "${config.xdg.dataHome}/w3m/keymap".source = ../../config/w3m/keymap;
     };
 
     sessionVariables = {
 
       CARGO_HOME = "${config.xdg.dataHome}/cargo";
+      ANDROID_USER_HOME = "${config.xdg.dataHome}/android";
+			W3M_DIR="${config.xdg.dataHome}/w3m";
 
     };
 

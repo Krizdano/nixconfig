@@ -9,7 +9,7 @@
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
     dotDir = ".config/zsh";
-    history.path = "${config.xdg.dataHome}/zsh/zsh_history";
+    history.path = "${config.xdg.dataHome}/zsh/.zsh_history";
     autocd = true;
     shellAliases = {
 			vi="nvim-client";
