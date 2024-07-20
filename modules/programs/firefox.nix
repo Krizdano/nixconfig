@@ -300,6 +300,11 @@
             Status = "locked";
           };
 
+					"dom.private-attribution.submission.enabled" = {
+            Value = false;
+            Status = "locked";
+					};
+
           "extensions.getAddons.showPane" = {
             Value = false;
             Status = "locked";
