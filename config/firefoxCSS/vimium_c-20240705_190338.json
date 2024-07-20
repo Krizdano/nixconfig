@@ -1,11 +1,11 @@
 {
 	"name": "Vimium C",
-	"@time": "7/5/2024, 7:03:38 PM",
-	"time": 1720186418582,
+	"@time": "7/19/2024, 7:04:28 PM",
+	"time": 1721396068718,
 	"environment": {
 		"extension": "1.99.997",
 		"platform": "linux",
-		"firefox": 115
+		"firefox": 128
 	},
 	"exclusionRules": [],
 	"grabBackFocus": true,
@@ -106,7 +106,7 @@
 		"js\\:|Js: javascript:\\ $S; JavaScriptgi",
 		""
 	],
-	"searchUrl": "http://localhost:8080/search?q=$s Google",
+	"searchUrl": "http://searx.hu/search?q=$s Searx",
 	"userDefinedCss": [
 		"/* find-host, not working write to the find-host section, so I put it outside */",
 		".R.HM.D>.LH {",
