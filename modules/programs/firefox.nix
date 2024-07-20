@@ -404,7 +404,7 @@
 
             "Searx" = {
               urls = [{
-                template = "http://localhost:8080/search?q={searchTerms}";
+                template = "https://searx.hu/search?q={searchTerms}";
               }];
               definedAliases = [ "@sx" ];
             };

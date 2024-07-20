@@ -8,7 +8,7 @@ in
       ./hardware-configuration.nix
       ./rollback.nix
       ../../modules/programs/plymouth
-      ../../modules/services/searx.nix
+      # ../../modules/services/searx.nix
     ];
 
   # adb
