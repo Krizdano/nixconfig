@@ -29,25 +29,25 @@
       wrap = true;
     };
 
-		highlight = {
-			folded = {
-			bg = "Background";
-			};
-			UfoFoldedEllipsis = {
-				fg = "#585B70";
-				bg = "Background";
-			};
-			UfoFoldedBg = {
-				bg = "Background";
-			};
-			CursorLine = {
-				fg = "#1b1c1e";
-			};
-			gitblame = {
-				fg = "#585B70";
-				bg = "#1b1c1e";
-			};
-		};
+    highlight = {
+      folded = {
+        bg = "Background";
+      };
+      UfoFoldedEllipsis = {
+        fg = "#585B70";
+        bg = "Background";
+      };
+      UfoFoldedBg = {
+        bg = "Background";
+      };
+      CursorLine = {
+        fg = "#1b1c1e";
+      };
+      gitblame = {
+        fg = "#585B70";
+        bg = "#1b1c1e";
+      };
+    };
 
     globals = {
       mapleader = " ";
@@ -256,78 +256,79 @@
     };
 
     extraConfigLuaPre = ''
-      			vim.g.gitblame_date_format = '%r'
-      			vim.g.gitblame_message_when_not_committed = '''
-      			vim.opt.listchars:append "space:⋅"
-      			vim.opt.listchars:append "eol:↴"
-      			vim.notify = require("notify")
-						vim.cmd([[
-								augroup MyColors
-								autocmd!
-								autocmd ColorScheme * highlight Normal guibg=none
-								augroup end
-						]]) 
-      		  '';
+                        vim.g.gitblame_date_format = '%r'
+                        vim.g.gitblame_message_when_not_committed = '''
+                        vim.opt.listchars:append "space:⋅"
+                        vim.opt.listchars:append "eol:↴"
+                        vim.notify = require("notify")
+
+                        vim.cmd([[
+                            augroup MyColors
+                            autocmd!
+                            autocmd ColorScheme * highlight Normal guibg=none
+                            augroup end
+                        ]])
+    '';
 
     extraConfigLua = '' 
-			require("lualine").setup { 
-				tabline = {
-					lualine_a = {
-						{
-							"buffers",
-							separator = { left = "", right = ""},
-							right_padding = 5,
-							top_padding = 5,
-							symbols = { alternate_file = "" },
-						},
-					},
-				},
-			}
-vim.cmd('abb q Q')
-vim.cmd('abb wq Wq')
-vim.api.nvim_create_user_command('Wq',function(opt)
-    vim.cmd.write()
-    for _, ui in pairs(vim.api.nvim_list_uis()) do
-      if ui.chan and not ui.stdout_tty then
-				if opt.bang then
-		  	 vim.cmd { cmd = "bufdo", args = { "bdelete!" }, bang = true }
-		  	-- vim.cmd { cmd = "bufdo", bang = true }
-				else
-		  	 vim.cmd { cmd = "bufdo", args = { "bdelete"} }
-		  	-- vim.cmd { cmd = "bufdo" }
-				end
-        vim.fn.chanclose(ui.chan)
-			else 
-				vim.cmd.quit()
-      end
-    end
-  end, { bang = true })
+                     require("lualine").setup {
+                         tabline = {
+                             lualine_a = {
+                                 {
+                                  "buffers",
+                                  separator = { left = "", right = ""},
+                                  right_padding = 5,
+                                  top_padding = 5,
+                                  symbols = { alternate_file = "" },
+                                 },
+                              },
+                         },
+                     }
 
-vim.api.nvim_create_user_command('Q',function(opt)
-    for _, ui in pairs(vim.api.nvim_list_uis()) do
-      if ui.chan and not ui.stdout_tty then
-				if opt.bang then
-		  	 vim.cmd { cmd = "bufdo", args = { "bdelete!" }, bang = true }
-				else
-		  	 vim.cmd { cmd = "bufdo", args = { "bdelete"} }
-				end
-        vim.fn.chanclose(ui.chan)
-			else 
-				vim.cmd.quit()
-      end
-    end
-  end, { bang = true })
+                    vim.cmd('abb q Q')
+                    vim.cmd('abb wq Wq')
 
- require'lspconfig'.nil_ls.setup{}
- require'lspconfig'.zls.setup{}
+                    vim.api.nvim_create_user_command('Wq',function(opt)
+                        vim.cmd.write()
+                        for _, ui in pairs(vim.api.nvim_list_uis()) do
+                            if ui.chan and not ui.stdout_tty then
+                                if opt.bang then
+                                    vim.cmd { cmd = "bufdo", args = { "bdelete!" }, bang = true }
+                                else
+                                    vim.cmd { cmd = "bufdo", args = { "bdelete"} }
+                                end
+                                vim.fn.chanclose(ui.chan)
+                            else
+                                vim.cmd.quit()
+                            end
+                        end
+                    end, { bang = true })
 
- require("glow").setup({
-		 width = 200,
-		 border = "none",
-		 width_ratio = 1,
-		 height_ratio = 1,
-		 })
- '';
+                    vim.api.nvim_create_user_command('Q',function(opt)
+                        for _, ui in pairs(vim.api.nvim_list_uis()) do
+                            if ui.chan and not ui.stdout_tty then
+                                if opt.bang then
+                                    vim.cmd { cmd = "bufdo", args = { "bdelete!" }, bang = true }
+                                else
+                                    vim.cmd { cmd = "bufdo", args = { "bdelete"} }
+                                end
+                                vim.fn.chanclose(ui.chan)
+                            else
+	                              vim.cmd.quit()
+                            end
+                        end
+                    end, { bang = true })
+
+                    require'lspconfig'.nil_ls.setup{}
+                    require'lspconfig'.zls.setup{}
+
+                    require("glow").setup({
+                        width = 200,
+                        border = "none",
+                        width_ratio = 1,
+                        height_ratio = 1,
+                    })
+    '';
 
 
     plugins = {
@@ -346,14 +347,14 @@ vim.api.nvim_create_user_command('Q',function(opt)
           toml
           kotlin
           c
-					norg
+          norg
           lua
           yaml
           go
           latex
           zig
-					vim
-					vimdoc
+          vim
+          vimdoc
         ];
         folding = true;
       };
@@ -383,7 +384,7 @@ vim.api.nvim_create_user_command('Q',function(opt)
 
       notify = {
         enable = true;
-				backgroundColour = "#000000";
+        backgroundColour = "#000000";
       };
 
       mkdnflow = {

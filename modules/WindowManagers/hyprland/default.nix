@@ -28,7 +28,7 @@ in
         "${ut} bat_level"
 
         # start nvim server
-				"nohup nvim --listen /tmp/neovim.pipe --headless > /dev/null 2>&1 0< /dev/null &!"
+        "nohup nvim --listen /tmp/neovim.pipe --headless > /dev/null 2>&1 0< /dev/null &!"
 
         "[workspace special:terminal silent]  kitty --title=main --class=main zellij -s main"
       ];
@@ -92,8 +92,8 @@ in
       };
 
       cursor = {
-      	inactive_timeout = 7;
-      	hide_on_key_press = true;
+        inactive_timeout = 7;
+        hide_on_key_press = true;
       };
 
 

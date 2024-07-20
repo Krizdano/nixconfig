@@ -6,9 +6,9 @@
   ./mpv.nix
   ./htop.nix
   ./starship.nix
-	./helix.nix
+  ./helix.nix
   ./waybar.nix
-	./direnv.nix
+  ./direnv.nix
   #./wofi.nix
   ./firefox.nix
   ./dconf.nix
@@ -18,7 +18,7 @@
   # ./chromium.nix
   #./atuin.nix
   #./plymouth
-	./zellij.nix
+  ./zellij.nix
   ./nixvim.nix
   # ./wezterm.nix
   ./aria2.nix

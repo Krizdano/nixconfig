@@ -60,7 +60,7 @@
 
       CARGO_HOME = "${config.xdg.dataHome}/cargo";
       ANDROID_USER_HOME = "${config.xdg.dataHome}/android";
-			W3M_DIR="${config.xdg.dataHome}/w3m";
+      W3M_DIR = "${config.xdg.dataHome}/w3m";
 
     };
 

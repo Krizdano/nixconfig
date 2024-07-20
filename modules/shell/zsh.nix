@@ -12,8 +12,8 @@
     history.path = "${config.xdg.dataHome}/zsh/.zsh_history";
     autocd = true;
     shellAliases = {
-			vi="nvim-client";
-			vim="nvim-client";
+      vi = "nvim-client";
+      vim = "nvim-client";
       ll = "ls -l";
       ls = "ls --color=always";
       notes = ''glow  /persist/home/nixconfig/notes'';

@@ -30,7 +30,7 @@
       ".local/share/direnv"
       ".local/share/android"
       ".local/share/w3m"
-			
+
       { directory = ".cache/ytfzf"; method = "symlink"; }
       { directory = ".local/share/TelegramDesktop"; method = "symlink"; }
       { directory = ".local/share/zsh"; method = "symlink"; }

@@ -1,11 +1,11 @@
 _: {
 
-	programs.zellij = {
-		enable = true;
-		enableZshIntegration = true;
-	};
+  programs.zellij = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 
-	xdg.configFile."zellij/config.kdl".text = '' 
+  xdg.configFile."zellij/config.kdl".text = '' 
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 keybinds clear-defaults=true {
     normal {
@@ -373,4 +373,4 @@ default {
 //
 // disable_session_metadata true
 	'';
-	}
+}
