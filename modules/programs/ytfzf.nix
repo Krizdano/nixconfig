@@ -19,10 +19,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "pystardust";
     repo = "ytfzf";
-    rev = "a67ba26482b2a27e12b83053a6048b9d78e20c98";
-    hash = "sha256-zLsMDrxa9mAtxjwA37+DNPjW91mC3efomaF6xd
-U4iZ
-E=";
+    rev = "0857c7409e8ba8307bfe9e1b218f4fbbd4b1db07";
+    hash = "sha256-rwCVOdu9UfTArISt8ITQtLU4Gj2EZd07bcFKvxXQ7Bc=";
   };
 
   nativeBuildInputs = [ makeWrapper ];
