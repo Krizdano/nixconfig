@@ -165,42 +165,42 @@ keymap ZQ NULL
 #urls operations................................................................
 #keymap        PEEK						#Show current page url.
 #Focus in address bar.
-keymap o        GOTO
-keymap C-l      GOTO
+keymap y        GOTO
+keymap C-i      GOTO
 #Focus in address bar. Open in new tab.
-keymap O        TAB_GOTO
-keymap ef       PEEK_LINK					#Show link under cursor.
+keymap Y        TAB_GOTO
+keymap ft       PEEK_LINK					#Show link under cursor.
 #Execute external browser = open current link in $BROWSER
 #tip: number(2-9) + external browser shortcut(M-o) executes executes the
 #external browser command linked to the prefix number.
 #See "External Program Settings" in "Option Setting Panel"(OPTIONS)
 #Open current link with external browser = sensible browser
-keymap M-o      EXTERN
+keymap M-y      EXTERN
 #copy current url and remove newline at the end.
-keymap yy       EXTERN     ~/.config/scripts/copy-url.sh
+keymap JJ       EXTERN     ~/.config/scripts/copy-url.sh
 #keymap yy       EXTERN     "echo -n %s | xclip -i -selection clipboard"
 #keymap yy       EXTERN     "echo -n %s | xsel -b"
 #open link under cursor with external browser = sensible browser
-keymap M-p      EXTERN_LINK
+keymap M-;      EXTERN_LINK
 #Copy link under cursor, It does not copy images urls
 #keymap yf       EXTERN_LINK 'env printf %s "$0" | xsel -b'
-keymap yf       EXTERN_LINK  ~/.config/scripts/copy-url.sh
+keymap jt       EXTERN_LINK  ~/.config/scripts/copy-url.sh
 #follow link in clipboard in the current tab.
-keymap p 	GOTO		/usr/lib/w3m/cgi-bin/goto_clipboard.cgi
+keymap ; 	GOTO		/usr/lib/w3m/cgi-bin/goto_clipboard.cgi
 #follow link in clipboard in new foreground tab.
-keymap P        TAB_GOTO	/usr/lib/w3m/cgi-bin/goto_clipboard.cgi
-keymap F        TAB_LINK					#Follow link in a new foreground tab
+keymap :        TAB_GOTO	/usr/lib/w3m/cgi-bin/goto_clipboard.cgi
+keymap T        TAB_LINK					#Follow link in a new foreground tab
 #follow link under cursor in new background tab
 #keymap    COMMAND   "TAB_LINK ; PREV_TAB"
-keymap f        GOTO_LINK					#Follow link in current tab
-keymap C-j      GOTO_LINK					#Follow link (Enter = Ctrl+j)
+keymap t        GOTO_LINK					#Follow link in current tab
+keymap C-n      GOTO_LINK					#Follow link (Enter = Ctrl+j)
 
 #scrolling....................................................................
 #pager-like scrolling.
-keymap k        DOWN
-keymap j        UP
-keymap l        RIGHT
-keymap h        LEFT
+keymap e        DOWN
+keymap n        UP
+keymap i        RIGHT
+keymap m        LEFT
 keymap gg       BEGIN						#Go to the top.
 #go to line number 5 "5G"
 keymap G        END						#Go to the end.
@@ -246,23 +246,23 @@ keymap C-w        COMMAND  "EXTERN 'echo %s >> ~/.w3m/RestoreTab.txt' ; CLOSE_TA
 #!aw = archwiki, !q = quora, dpkg = debian packages, !g = google, !gi = google images
 #other duckduckgo capabilities (calculator, unit conversion, etc)
 #https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie
-keymap t        TAB_GOTO http://localhost:8080/search?q=		#New tab in www.foobar.com
+keymap b        TAB_GOTO http://localhost:8080/search?q=		#New tab in www.foobar.com
 #keymap C-t      TAB_GOTO http://www.google.com/en		#New tab in www.foobar.com
-keymap C-t      TAB_GOTO #https://duckduckgo.com/lite/		#New tab in www.foobar.com
-keymap yt       NEW_TAB						#Duplicate current tab
-keymap J        NEXT_TAB					#Change focus to left tab
-keymap K        PREV_TAB					#Change focus to right tab
-keymap gK       TAB_LEFT					#Move tab to the left
-keymap gJ       TAB_RIGHT					#Move tab to the right
-keymap gt       TAB_MENU					#Tab menu
-keymap :t       TAB_MENU					#Tab menu
+keymap C-b      TAB_GOTO #https://duckduckgo.com/lite/		#New tab in www.foobar.com
+keymap jb       NEW_TAB						#Duplicate current tab
+keymap N        NEXT_TAB					#Change focus to left tab
+keymap E        PREV_TAB					#Change focus to right tab
+keymap gE       TAB_LEFT					#Move tab to the left
+keymap gN       TAB_RIGHT					#Move tab to the right
+keymap gb       TAB_MENU					#Tab menu
+keymap :b       TAB_MENU					#Tab menu
 #Restore last closed tab
 keymap u        TAB_GOTO          /usr/lib/w3m/cgi-bin/restore_tab.cgi
-keymap C-T      TAB_GOTO          /usr/lib/w3m/cgi-bin/restore_tab.cgi
+keymap C-B      TAB_GOTO          /usr/lib/w3m/cgi-bin/restore_tab.cgi
 #-navigation...................................................................
 #keymap f        MOVE_LIST_MENU					#Show links--> move cursor
 #keymap F        LIST_MENU					#Show links--> follow link
-keymap s        LINK_BEGIN					#Move cursor to first link/ns Move cursor to link n
+keymap r        LINK_BEGIN					#Move cursor to first link/ns Move cursor to link n
 keymap [        LINK_BEGIN					#nf Move cursor to link n
 keymap ]        LINK_END					#Move cursor to last link/nf Move cursor to link [n]
 #Move cursor to next left or upward link/n{ execute the function n times
@@ -272,28 +272,28 @@ keymap }        NEXT_RIGHT_DOWN
 #TAB/Shift+TAB move cursor to next/previous link respectively
 
 #-history navigation...........................................................
-keymap L        NEXT						#Go forward in history
-keymap H        PREV						#Go back in history
-keymap gh       SELECT_MENU					#History menu
+keymap I        NEXT						#Go forward in history
+keymap M        PREV						#Go back in history
+keymap gm       SELECT_MENU					#History menu
 #keymap C-h      SELECT_MENU					#History menu
-keymap :h       HISTORY						#Show history
-keymap C-h      HISTORY						#Show history
+keymap :m       HISTORY						#Show history
+keymap C-m      HISTORY						#Show history
 #ctrl+shift+h (firefox compatible) does not work
 #keymap C-H      HISTORY					#Show history
 
 #-bookmarks....................................................................
-keymap C-d      ADD_BOOKMARK					#Add current page to bookmarks
-keymap gb       VIEW_BOOKMARK					#Show bookmarks
-keymap :b       VIEW_BOOKMARK					#Show bookmarks
-keymap C-b      VIEW_BOOKMARK					#Show bookmarks
+keymap C-s      ADD_BOOKMARK					#Add current page to bookmarks
+keymap gz       VIEW_BOOKMARK					#Show bookmarks
+keymap :z       VIEW_BOOKMARK					#Show bookmarks
+keymap C-z      VIEW_BOOKMARK					#Show bookmarks
 
 #-search.......................................................................
 keymap /        ISEARCH						#Enter find mode
-keymap C-f      ISEARCH						#Enter find mode
+keymap C-t      ISEARCH						#Enter find mode
 keymap ?        ISEARCH_BACK					#Enter find mode backwards (incremental)
 #support regex expressions
-keymap n        SEARCH_NEXT					#Find next
-keymap N        SEARCH_PREV					#Find previous
+keymap k        SEARCH_NEXT					#Find next
+keymap k        SEARCH_PREV					#Find previous
 
 #-Commands....................................................................
 #Execute w3m functions.
@@ -306,41 +306,41 @@ keymap |        PIPE_BUF
 #Execute shell command and browse
 #keymap       PIPE_SHELL
 #Reload configuration files.
-keymap M-r      REINIT
+keymap M-p      REINIT
 keymap q        QUIT 						#Quit w3m with confirmation.
-keymap ZZ       EXIT						#Quit w3m without confirmation.
-keymap r        RELOAD						#Reload current page.
+keymap XX       EXIT						#Quit w3m without confirmation.
+keymap p        RELOAD						#Reload current page.
 #keymap S      INTERRUPT					#Send w3m to background=C-z in bash
 
 #-save/load.....................................................................
 #Save document source (html), sometimes download a gzip file (without extention)
 keymap :w       DOWNLOAD
-keymap C-s      DOWNLOAD
+keymap C-r      DOWNLOAD
 #Save redered document
 keymap :W       PRINT
 #keymap ESC-C-J SUBMIT						#e.g. execute search in google
 #Load local file.
-keymap C-o      LOAD
+keymap C-y      LOAD
 
 #-info.........................................................................
 keymap gC-g     INFO						#current page info
 #keymap C-i     INFO						#current page info
 keymap C-g      LINE_INFO					#line under cursor info
-keymap gf       VIEW						#See source of current page. dwb key
-keymap C-u       VIEW						#See source of current page. FF key
+keymap gt       VIEW						#See source of current page. dwb key
+keymap C-l       VIEW						#See source of current page. FF key
 
 #-miscellany....................................................................
-keymap C-Y      DOWNLOAD_LIST					#Show download menu
-keymap C-y      DOWNLOAD_LIST					#Show download menu
-keymap :E       EDIT_SCREEN					#Edit current rendered document with sensible-editor
-keymap :e       EDIT						#Edit current local file wtih sensible-editor
+keymap C-j      DOWNLOAD_LIST					#Show download menu
+keymap C-j      DOWNLOAD_LIST					#Show download menu
+keymap :F       EDIT_SCREEN					#Edit current rendered document with sensible-editor
+keymap :f       EDIT						#Edit current local file wtih sensible-editor
 
-keymap M-u	LIST						#Show list of all links, anchors and images
-keymap M-m	MOUSE_TOGGLE    				#Toggle activity of mouse
-keymap M-i      VIEW_IMAGE					#pendant change SC.View image in extern viewer
-keymap M-I DISPLAY_IMAGE
+keymap M-l	LIST						#Show list of all links, anchors and images
+keymap M-h	MOUSE_TOGGLE    				#Toggle activity of mouse
+keymap M-u      VIEW_IMAGE					#pendant change SC.View image in extern viewer
+keymap M-U DISPLAY_IMAGE
 #Show Context menu. It has specific option for links under the cursor.
-keymap M-c      MENU
+keymap M-d      MENU
 
 #-word operations...............................................................
 #send word interactively to specified dictionary
@@ -351,7 +351,7 @@ keymap M-c      MENU
 
 #tests..........................................................................
 #Folding lines for plain text files
-keymap  C-x  COMMAND  "SET_OPTION fold_line=toggle ; RESHAPE"
+keymap  C-c  COMMAND  "SET_OPTION fold_line=toggle ; RESHAPE"
 #keymap C-x DISPLAY_IMAGE
 #keymap C-v MARK_URL
 #keymap ; MARK_URL
