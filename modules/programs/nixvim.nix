@@ -29,25 +29,25 @@
       wrap = true;
     };
 
-    highlight = {
-      folded = {
-        #bg = "Background";
-      };
-      UfoFoldedEllipsis = {
-        fg = "#585B70";
-        #bg = "Background";
-      };
-      UfoFoldedBg = {
-        #bg = "Background";
-      };
-      CursorLine = {
-        bg = "#1b1c1e";
-      };
-      gitblame = {
-        fg = "#585B70";
-        bg = "#1b1c1e";
-      };
-    };
+		highlight = {
+			folded = {
+			bg = "Background";
+			};
+			UfoFoldedEllipsis = {
+				fg = "#585B70";
+				bg = "Background";
+			};
+			UfoFoldedBg = {
+				bg = "Background";
+			};
+			CursorLine = {
+				fg = "#1b1c1e";
+			};
+			gitblame = {
+				fg = "#585B70";
+				bg = "#1b1c1e";
+			};
+		};
 
     globals = {
       mapleader = " ";
@@ -377,6 +377,7 @@ vim.api.nvim_create_user_command('Q',function(opt)
 
       notify = {
         enable = true;
+				backgroundColour = "#000000";
       };
 
       mkdnflow = {
