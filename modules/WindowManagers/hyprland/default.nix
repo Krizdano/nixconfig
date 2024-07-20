@@ -27,6 +27,9 @@ in
         # check battery level
         "${ut} bat_level"
 
+        # start nvim server
+				"nohup nvim --listen /tmp/neovim.pipe --headless > /dev/null 2>&1 0< /dev/null &!"
+
         "[workspace special:terminal silent]  kitty --title=main --class=main zellij -s main"
       ];
 

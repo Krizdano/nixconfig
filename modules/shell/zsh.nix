@@ -12,6 +12,8 @@
     history.path = "${config.xdg.dataHome}/zsh/zsh_history";
     autocd = true;
     shellAliases = {
+			vi="nvim-client";
+			vim="nvim-client";
       ll = "ls -l";
       ls = "ls --color=always";
       nt = ''pushd /persist/home; find nixconfig/notes -name '*.md' | fzf --preview="glow {}" | xargs vi; popd'';
@@ -69,6 +71,27 @@
       ww(){
       "w3m" "http://localhost:8080/search?q=$*"
       }
+
+			conf() {
+				pushd /persist/home
+				filename=/persist/home/$(find  nixconfig -name '*.nix' | fzf --preview="pistol {}");
+
+				if  test -f "$filename" ; then
+					$EDITOR "$filename"
+				fi
+				popd
+				clear
+			}
+
+			sc() {
+				pushd /persist/home 
+				filename=/persist/home/$(find nixconfig/config/scripts -name '*.sh' | fzf --preview="glow {}") 
+				if  test -f "$filename" ; then
+					$EDITOR "$filename"
+				fi
+				popd
+				clear
+			}
 
       unsetopt BEEP
 

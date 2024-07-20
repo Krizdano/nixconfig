@@ -109,10 +109,8 @@
     variables = {
       TERMINAL = "kitty";
       NIX_REMOTE = "daemon"; # force nix command to call the daemon
-      EDITOR = "nvim";
-      VISUAL = "nvim";
-      ANDROID_HOME = ''"$XDG_DATA_HOME"/android'';
-      # CARGO_HOME = ''"$XDG_DATA_HOME"/cargo'';
+      EDITOR = "nvim-client";
+      VISUAL = "nvim-client";
     };
   };
 

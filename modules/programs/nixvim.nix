@@ -2,8 +2,6 @@
 
   programs.nixvim = {
     enable = true;
-    vimAlias = true;
-    viAlias = true;
 
 
     opts = {
@@ -269,25 +267,65 @@
       			vim.opt.listchars:append "space:⋅"
       			vim.opt.listchars:append "eol:↴"
       			vim.notify = require("notify")
+						vim.cmd([[
+								augroup MyColors
+								autocmd!
+								autocmd ColorScheme * highlight Normal guibg=none
+								augroup end
+						]]) 
       		  '';
 
     extraConfigLua = '' 
-	 require("lualine").setup { 
-		 tabline = {
-			 lualine_a = {
-				 {
-					 "buffers",
-					 separator = { left = "", right = ""},
-					 right_padding = 5,
-					 top_padding = 5,
-					 symbols = { alternate_file = "" },
+			require("lualine").setup { 
+				tabline = {
+					lualine_a = {
+						{
+							"buffers",
+							separator = { left = "", right = ""},
+							right_padding = 5,
+							top_padding = 5,
+							symbols = { alternate_file = "" },
+						},
+					},
 				},
-			},
-		},
-  }
+			}
+vim.cmd('abb q Q')
+vim.cmd('abb wq Wq')
+vim.api.nvim_create_user_command('Wq',function(opt)
+    vim.cmd.write()
+    for _, ui in pairs(vim.api.nvim_list_uis()) do
+      if ui.chan and not ui.stdout_tty then
+				if opt.bang then
+		  	 vim.cmd { cmd = "bufdo", args = { "bdelete!" }, bang = true }
+		  	-- vim.cmd { cmd = "bufdo", bang = true }
+				else
+		  	 vim.cmd { cmd = "bufdo", args = { "bdelete"} }
+		  	-- vim.cmd { cmd = "bufdo" }
+				end
+        vim.fn.chanclose(ui.chan)
+			else 
+				vim.cmd.quit()
+      end
+    end
+  end, { bang = true })
 
+vim.api.nvim_create_user_command('Q',function(opt)
+    for _, ui in pairs(vim.api.nvim_list_uis()) do
+      if ui.chan and not ui.stdout_tty then
+				if opt.bang then
+		  	 vim.cmd { cmd = "bufdo", args = { "bdelete!" }, bang = true }
+				else
+		  	 vim.cmd { cmd = "bufdo", args = { "bdelete"} }
+				end
+        vim.fn.chanclose(ui.chan)
+			else 
+				vim.cmd.quit()
+      end
+    end
+  end, { bang = true })
 
  require'lspconfig'.nil_ls.setup{}
+ require'lspconfig'.zls.setup{}
 
  require("glow").setup({
 		 width = 200,
