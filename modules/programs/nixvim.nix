@@ -96,7 +96,7 @@
 
       {
         key = "<Leader>q";
-        action = ":bp<CR>:bd #<CR>";
+        action = ":bd<CR>";
         options = {
           silent = true;
         };
@@ -119,7 +119,7 @@
       }
 
       {
-        key = "<Leader><Leader>t";
+        key = "<Leader>n";
         action = ":e ~/Documents/journal/index.md<CR>";
         options = {
           silent = true;
@@ -143,7 +143,7 @@
       }
 
       {
-        key = "<Leader>ff";
+        key = "<Leader>.";
         action = ":Telescope find_files<CR>";
         options = {
           silent = true;
@@ -151,7 +151,7 @@
       }
 
       {
-        key = "<Leader>fg";
+        key = "<Leader>f";
         action = ":Telescope live_grep<CR>";
         options = {
           silent = true;
@@ -206,13 +206,6 @@
         };
       }
 
-      {
-        key = "<Leader>n";
-        action = ":e ~/nixconfig/notes/vimwiki/index.md<CR>";
-        options = {
-          silent = true;
-        };
-      }
       {
         mode = "t";
         key = "<Del>";
