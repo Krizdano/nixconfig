@@ -17,6 +17,9 @@
       # for mpv scripts
       quality-menu
     ];
+    bindings = {
+      F = "script-binding quality_menu/video_formats_toggle";
+    };
   };
 
 
