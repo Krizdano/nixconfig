@@ -62,6 +62,13 @@
       ''eval "$(starship init zsh)"
 
       export KEYTIMEOUT=1
+      
+      # eat integration
+
+			[ -n "$EAT_SHELL_INTEGRATION_DIR" ] && \
+			source "$EAT_SHELL_INTEGRATION_DIR/zsh"
+
+
 
       # launch w3m with a search query
 

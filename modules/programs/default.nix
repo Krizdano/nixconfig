@@ -10,6 +10,7 @@
   ./waybar.nix
   ./direnv.nix
   #./wofi.nix
+	./emacs.nix
   ./firefox.nix
   ./dconf.nix
   #./mako.nix

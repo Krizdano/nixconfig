@@ -46,13 +46,26 @@ home_manager_search ()
 	fi
 }
 
+# terminal ()
+# {
+# 	if pgrep "kitty" > /dev/null
+# 	then
+# 		hyprctl dispatch togglespecialworkspace terminal
+# 	else
+# 		kitty --title=main --class=main zellij -s main & disown
+# 		emacsclient -c & disown
+# 	fi
+# }
+
+
 terminal ()
 {
-	if pgrep "kitty" > /dev/null
+	if pgrep "emacsclient" > /dev/null
 	then
-		hyprctl dispatch togglespecialworkspace terminal 
+		hyprctl dispatch togglespecialworkspace terminal
 	else
-		kitty --title=main --class=main zellij -s main & disown
+		emacsclient -c -e "(vterm)" & disown
+		hyprctl dispatch togglespecialworkspace terminal
 	fi
 }
 

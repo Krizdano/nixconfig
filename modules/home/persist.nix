@@ -20,6 +20,9 @@
       # ".config/Google"
       # ".m2"
 
+      ".config/emacs"
+
+
       { directory = ".cache/mesa_shader_cache"; method = "symlink"; }
       { directory = ".cache/mozilla"; method = "symlink"; }
       { directory = ".cache/nix"; method = "symlink"; }
@@ -30,6 +33,7 @@
       ".local/share/direnv"
       ".local/share/android"
       ".local/share/w3m"
+      ".local/share/emacs-backup"
 
       { directory = ".cache/ytfzf"; method = "symlink"; }
       { directory = ".local/share/TelegramDesktop"; method = "symlink"; }

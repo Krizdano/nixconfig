@@ -31,6 +31,7 @@ in
         "nohup nvim --listen /tmp/neovim.pipe --headless > /dev/null 2>&1 0< /dev/null &!"
 
         "[workspace special:terminal silent]  kitty --title=main --class=main zellij -s main"
+        ''[workspace special:terminal silent]  emacsclient -c -e "(vterm)"''
       ];
 
       monitor = [
@@ -171,6 +172,7 @@ in
 
         # kitty main
         "workspace special:terminal, class:^(main)$"
+        "workspace special:terminal, class:^(emacs)$"
 
         # kitty
         "float, class:^(kitty)$"
