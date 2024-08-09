@@ -9,7 +9,7 @@
     font = {
       name = "FiraCode Nerd Font";
       package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
-      size = 13;
+      size = 14;
     };
     keybindings = {
       "ctrl+shift+w" = "close_window_with_confirmation ignore-shell";
