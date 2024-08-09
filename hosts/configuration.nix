@@ -99,7 +99,8 @@
     carlito
     vegur
     noto-fonts
-    (nerdfonts.override { fonts = [ "Ubuntu" ]; }) # for swaybar config
+    office-code-pro
+    (nerdfonts.override { fonts = [ "Ubuntu" "SourceCodePro" ]; }) # for swaybar config
   ];
 
 
