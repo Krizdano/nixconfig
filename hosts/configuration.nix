@@ -110,8 +110,8 @@
     variables = {
       TERMINAL = "kitty";
       NIX_REMOTE = "daemon"; # force nix command to call the daemon
-      EDITOR = "nvim-client";
-      VISUAL = "nvim-client";
+      EDITOR = "emacsclient";
+      VISUAL = "emacsclient";
     };
   };
 
