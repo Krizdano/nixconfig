@@ -84,6 +84,11 @@
         method = "symlink";
       }
 
+      {
+        directory = "projects";
+        method = "symlink";
+      }
+
     ];
     files = [
 
