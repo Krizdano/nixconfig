@@ -151,6 +151,14 @@
       }
 
       {
+        key = "<CR>";
+        action = ":Telescope lsp_definitions<CR>";
+        options = {
+          silent = true;
+        };
+      }
+
+      {
         key = "<Leader>f";
         action = ":Telescope live_grep<CR>";
         options = {
