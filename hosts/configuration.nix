@@ -1,4 +1,4 @@
-{ pkgs, lib, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
@@ -57,12 +57,12 @@
   };
 
 
-  # git 
+  # git
   programs.git.enable = true;
 
   #pam
   security.pam.services = {
-    swaylock = { }; # for swaylock to work 
+    swaylock = { }; # for swaylock to work
   };
 
 
@@ -103,8 +103,6 @@
     (nerdfonts.override { fonts = [ "Ubuntu" "SourceCodePro" ]; }) # for swaybar config
   ];
 
-
-
   environment = {
     pathsToLink = [ "/share/zsh" ];
     shells = with pkgs; [ zsh ];
@@ -116,7 +114,7 @@
     };
   };
 
-  # pipewire 
+  # pipewire
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -134,7 +132,7 @@
   # authorisation
   security.polkit.enable = true;
 
-  # dbus 
+  # dbus
   services.dbus = {
     enable = true;
     packages = [ pkgs.gcr ]; # for gpg authorisation
@@ -193,13 +191,13 @@
       { from = 1714; to = 1764; }
     ];
     allowedTCPPorts = [
-      #8080 8000 
+      # 8080 8000
     ];
   };
 
 
   networking.firewall.allowedUDPPortRanges = [
-    # kdeconnect 
+    # kdeconnect
     { from = 1741; to = 1764; }
   ];
 
@@ -208,7 +206,7 @@
     supportsDryActivation = true;
     text = ''
       ${pkgs.nvd}/bin/nvd --nix-bin-dir=${pkgs.nix}/bin diff /run/current-system "$systemConfig"
-    '';
+      '';
   };
 
 

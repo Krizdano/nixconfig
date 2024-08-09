@@ -2,8 +2,6 @@
 
   programs.nixvim = {
     enable = true;
-
-
     opts = {
       background = "dark";
       clipboard = "unnamedplus";
@@ -278,7 +276,7 @@
                         ]])
     '';
 
-    extraConfigLua = '' 
+    extraConfigLua = ''
                      require("lualine").setup {
                          tabline = {
                              lualine_a = {
@@ -289,7 +287,7 @@
                                   top_padding = 5,
                                   symbols = { alternate_file = "" },
                                  },
-                              },
+                             },
                          },
                      }
 

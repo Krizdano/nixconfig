@@ -2,10 +2,9 @@ _: {
 
   programs.zellij = {
     enable = true;
-    enableZshIntegration = true;
   };
 
-  xdg.configFile."zellij/config.kdl".text = '' 
+  xdg.configFile."zellij/config.kdl".text = ''
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 keybinds clear-defaults=true {
     normal {
@@ -74,7 +73,7 @@ keybinds clear-defaults=true {
         bind "8" { GoToTab 8; SwitchToMode "Normal"; }
         bind "9" { GoToTab 9; SwitchToMode "Normal"; }
         bind "Tab" { ToggleTab; }
-    }
+              }
     scroll {
         bind "Alt s" { SwitchToMode "Normal"; }
         bind "f" { EditScrollback; SwitchToMode "Normal"; }
@@ -150,7 +149,7 @@ keybinds clear-defaults=true {
         bind "d" { Detach; }
         bind "Space" { NextSwapLayout; }
         bind "q" { CloseFocus; SwitchToMode "Normal"; }
-    }
+              }
     shared_except "locked" {
         bind "Ctrl g" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
@@ -162,7 +161,7 @@ keybinds clear-defaults=true {
         bind "Alt i" "Alt Right" { MoveFocusOrTab "Right"; }
         bind "Alt n" "Alt Down" { MoveFocus "Down"; }
         bind "Alt e" "Alt Up" { MoveFocus "Up"; }
-				bind "Alt q" { CloseFocus; }
+        bind "Alt q" { CloseFocus; }
         bind "Alt =" "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt [" { PreviousSwapLayout; }
@@ -192,7 +191,7 @@ keybinds clear-defaults=true {
     shared_except "tmux" "locked" {
         bind "Ctrl b" { SwitchToMode "Tmux"; }
     }
-}
+    }
 
 plugins {
     tab-bar location="zellij:tab-bar"
@@ -202,10 +201,10 @@ plugins {
     session-manager location="zellij:session-manager"
     welcome-screen location="zellij:session-manager" {
         welcome_screen true
-    }
+                                     }
     filepicker location="zellij:strider" {
         cwd "/"
-    }
+                                    }
 }
 
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
@@ -282,7 +281,7 @@ default {
     cyan "#89dceb" // Sky
     black "#181825" // Mantle
     white "#cdd6f4"
-  }
+}
  }
 
 // Choose the theme that is specified in the themes section.
@@ -372,5 +371,5 @@ default {
 // Default: false
 //
 // disable_session_metadata true
-	'';
+  '';
 }

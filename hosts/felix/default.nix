@@ -3,13 +3,12 @@ let
   inherit (secrets) users;
 in
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./rollback.nix
-      ../../modules/programs/plymouth
-      # ../../modules/services/searx.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ./rollback.nix
+    ../../modules/programs/plymouth
+    # ../../modules/services/searx.nix
+  ];
 
   # adb
   programs.adb.enable = true;
@@ -49,7 +48,7 @@ in
         isNormalUser = true;
         extraGroups = [ "jupyter" "networkmanager" "wheel" "video" "libvirtd" "audio" "adbusers" ];
         packages = with pkgs; [
-          # user packages 
+          # user packages
         ];
       };
     };
@@ -82,7 +81,7 @@ in
     };
   };
 
-  # bluetooth 
+  # bluetooth
   hardware.bluetooth.enable = true;
 
   # Bootloader.
@@ -135,4 +134,3 @@ in
   ];
 
 } # end of configuration
-

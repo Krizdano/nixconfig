@@ -1,16 +1,12 @@
-# My personal Nixos flake 
+# My personal Nixos flake
 # this is a flake manages my Nixos Configuration
 
-#  flake.nix *             
-#   ├─ ./hosts
-#   │    └─ default.nix
 {
   description = "My personal Nixos Configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     stable.url = "github:nixos/nixpkgs?ref=release-24.05";
-    # stable.url = "github:NixOS/nixpkgs/release-24.05";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -35,14 +31,13 @@
       secrets = import ./secrets.nix;
       user = secrets.users.primary.userName;
     in
-    {
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
-      nixosConfigurations = (
-        import ./hosts {
-          inherit (nixpkgs) lib;
-          inherit inputs nixpkgs home-manager user location impermanence nixvim stable secrets;
-        }
-      );
-    };
+      {
+        formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
+        nixosConfigurations = (
+          import ./hosts {
+            inherit (nixpkgs) lib;
+            inherit inputs nixpkgs home-manager user location impermanence nixvim stable secrets;
+          });
+      };
 
 }
